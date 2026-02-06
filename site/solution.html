@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Nalyst AI solution</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			body {
+				background-color: #f5f5f5; /* Light grayish background */
+				color: #333333; /* Dark gray text color */
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: bold;
+				color: #ea382bd9; /* Dark pink for headings */
+			}
+
+			/* Unified top navigation */
+			header.topbar {
+				--fg: #1f2933;
+				--border: #e5e7eb;
+				--accent: #ea382b;
+				--shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 14px 24px;
+				background: #ffffff;
+				border-bottom: 1px solid var(--border);
+				box-shadow: var(--shadow);
+				position: sticky;
+				top: 0;
+				z-index: 20;
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			.topbar-row {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+			}
+
+			.topbar .brand {
+				font-weight: 700;
+				font-size: 1.1rem;
+				letter-spacing: 0.02em;
+			}
+
+			.topbar .brand a {
+				color: var(--fg);
+				text-decoration: none;
+			}
+
+			.topbar nav {
+				display: flex;
+				align-items: center;
+			}
+
+			.topbar nav ul {
+				list-style: none;
+				display: flex;
+				gap: 10px;
+				margin: 0;
+				padding: 0;
+			}
+
+			.topbar nav a {
+				padding: 8px 14px;
+				border-radius: 8px;
+				color: var(--fg);
+				font-weight: 600;
+				font-size: 0.95rem;
+				text-decoration: none;
+			}
+
+			.topbar nav a:hover {
+				background: var(--border);
+				text-decoration: none;
+			}
+
+			.topbar nav a.active {
+				background: var(--accent);
+				color: #ffffff;
+			}
+
+			.topbar .mobile-menu-btn {
+				display: none;
+				background: none;
+				border: 1px solid var(--border);
+				border-radius: 8px;
+				padding: 8px 10px;
+				cursor: pointer;
+				color: var(--fg);
+			}
+
+			@media (max-width: 768px) {
+				.topbar nav ul {
+					gap: 6px;
+				}
+				.topbar nav a {
+					padding: 8px 10px;
+					font-size: 0.9rem;
+				}
+			}
+
+			@media (max-width: 640px) {
+				.topbar {
+					flex-wrap: wrap;
+					gap: 0;
+				}
+				.topbar .mobile-menu-btn {
+					display: block;
+				}
+				.topbar nav {
+					width: 100%;
+					display: none;
+					margin-top: 10px;
+				}
+				.topbar nav.open {
+					display: block;
+				}
+				.topbar nav ul {
+					flex-direction: column;
+					gap: 6px;
+				}
+				.topbar nav a {
+					display: block;
+					padding: 10px 14px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				header.topbar {
+					padding: 12px 14px;
+				}
+				.topbar .brand {
+					font-size: 1rem;
+				}
+				.topbar nav a {
+					padding: 8px 10px;
+					font-size: 0.85rem;
+				}
+			}
+        </style>
+	</head>
+	<body class="is-preload">
+		<header class="topbar">
+			<div class="topbar-row">
+				<div class="brand"><a href="index.html">Nalyst Research</a></div>
+				<button class="mobile-menu-btn" aria-label="Toggle menu">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+			<nav aria-label="Main navigation">
+				<ul>
+					<li><a href="mk-docs/nalyst/index.html">Nalyst Docs</a></li>
+					<li><a href="mk-docs/neurova/index.html">Neurova Docs</a></li>
+					<li><a href="index.html#products">Products</a></li>
+					<li><a href="index.html#docs">Docs</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>NALYST</strong></a>
+						<ul class="icons">
+							<li><a href="https://www.youtube.com/@AnalyticalHarry"
+									class="icon brands fa-youtube"><span
+										class="label">YouTube</span></a></li>
+							<li><a href="https://github.com/nalystresearch"
+									class="icon brands fa-github"><span
+										class="label">GitHub</span></a></li>
+						</ul>
+					</header>
+
+					<!-- Content -->
+					<section>
+						<header class="main">
+						</header>
+						<section>
+							<header class="major">
+								<h2>DATA PROJECT</h2>
+							</header>
+							<div class="posts">
+								<article>
+									<a href="#" class="image" title="Pre Processing"><img
+											src="images/pic01.jpg" alt="Pre Processing" /></a>
+									<h3>Pre Processing</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">READ MORE</a></li>
+									</ul>
+								</article>
+								<article>
+									<a href="#" class="image" title="Regression & Score"><img
+											src="images/pic02.jpg" alt="Regression & Score" /></a>
+									<h3>Regression & Score</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">READ MORE</a></li>
+									</ul>
+								</article>
+								<article>
+									<a href="#" class="image"
+										title="Classification & Decision boundary"><img src="images/pic03.jpg"
+											alt="Classification & Decision boundary" /></a>
+									<h3>Classification & Decision boundary</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">READ MORE</a></li>
+									</ul>
+								</article>
+								<article>
+									<a href="#" class="image"
+										title="Cluster Analysis & Value of elbow"><img src="images/pic04.jpg"
+											alt="Cluster Analysis & Value of elbow" /></a>
+									<h3>Cluster Analysis & Value of elbow</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">READ MORE</a></li>
+									</ul>
+								</article>
+								<article>
+									<a href="#" class="image" title="Principle Component"><img
+											src="images/pic05.jpg" alt="Principle Component" /></a>
+									<h3>Principle Component</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">READ MORE</a></li>
+									</ul>
+								</article>
+								<article>
+									<a href="#" class="image" title="Decision Tree"><img
+											src="images/pic06.jpg" alt="Decision Tree" /></a>
+									<h3>Decision Tree</h3>
+									<p>Parah</p>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</article>
+							</div>
+						</section>
+						<hr class="major" />
+						<!-- Elements -->
+						<div class="row gtr-200">
+							<div class="col-6 col-12-medium">
+
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
+
+					<!-- Menu -->
+					<nav id="menu">
+						<header class="major">
+							<h2>Menu</h2>
+						</header>
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="service.html">Service</a></li>
+							<li><a href="solution.html">AI solution</a></li>
+							<li>
+								<span class="opener">Resources</span>
+								<ul>
+									<li><a href="#">Regression</a></li>
+									<li><a href="#">Classification</a></li>
+									<li><a href="#">Clustering</a></li>
+									<li><a href="#">PCA</a></li>
+								</ul>
+							</nav>
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Contact Us</h2>
+								</header>
+								<p>We help people find insight. If any startup, company or any
+									organisation needs help, please contact us.</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a
+											href="#">nalystresearch@gmail.com</a></li>
+									<li class="icon solid fa-home">Glasgow, Scotland<br /></li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Nalyst Research. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script>
+
+			</body>
+		</html>

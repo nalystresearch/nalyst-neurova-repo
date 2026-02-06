@@ -1,0 +1,1739 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <title>Neurova Documentation - Computer Vision & Deep Learning</title>
+    <meta
+      name="description"
+      content="Neurova documentation - Complete image processing, computer vision, deep learning, and machine learning library with GPU acceleration."
+    />
+    <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../../css/neurova.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-row">
+        <div class="brand"><a href="../../index.html">Nalyst Research</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="../nalyst/index.html">Nalyst Docs</a></li>
+          <li><a href="index.html" class="active">Neurova Docs</a></li>
+          <li><a href="../../index.html#products">Products</a></li>
+          <li><a href="../../index.html#docs">Docs</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+              <tr><td><code>neurova.object_detection</code></td><td>Neurova
+                      object detection with training</td></tr>
+        <h4>Getting Started</h4>
+        <ul>
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#quickstart">Quick Start</a></li>
+        </ul>
+        <h4>Image Processing</h4>
+        <ul>
+          <li><a href="#core">Core Operations</a></li>
+          <li><a href="#filters">Filters & Effects</a></li>
+          <li><a href="#transform">Transformations</a></li>
+          <li><a href="#segmentation">Segmentation</a></li>
+        </ul>
+        <h4>Computer Vision</h4>
+        <ul>
+          <li><a href="#features">Feature Detection</a></li>
+          <li><a href="#face">Face Detection</a></li>
+          <li><a href="#object-detection">Object Detection</a></li>
+          <li><a href="#video">Video Processing</a></li>
+        </ul>
+        <h4>Machine Learning</h4>
+        <ul>
+          <li><a href="#ml-preprocessing">Preprocessing</a></li>
+          <li><a href="#ml-classification">Classification</a></li>
+          <li><a href="#ml-regression">Regression</a></li>
+          <li><a href="#ml-ensemble">Ensemble Methods</a></li>
+          <li><a href="#ml-clustering">Clustering</a></li>
+          <li><a href="#ml-reduction">Dimensionality Reduction</a></li>
+          <li><a href="#ml-evaluation">Model Evaluation</a></li>
+          <li><a href="#ml-validation">Cross-Validation</a></li>
+          <li><a href="#ml-pipeline">Pipelines</a></li>
+          <li><a href="#ml-stats">Statistical Tests</a></li>
+        </ul>
+        <h4>Time Series</h4>
+        <ul>
+          <li><a href="#timeseries">Time Series Analysis</a></li>
+        </ul>
+        <h4>Data Augmentation</h4>
+        <ul>
+          <li><a href="#augmentation">Image Augmentation</a></li>
+        </ul>
+        <h4>Deep Learning</h4>
+        <ul>
+          <li><a href="#neural">Neural Networks</a></li>
+          <li><a href="#architectures">Pre-built Architectures</a></li>
+          <li><a href="#gpu">GPU Acceleration</a></li>
+        </ul>
+        <h4>Datasets</h4>
+        <ul>
+          <li><a href="#datasets-tabular">Tabular Data</a></li>
+          <li><a href="#datasets-images">Image Datasets</a></li>
+          <li><a href="#datasets-timeseries">Time Series</a></li>
+        </ul>
+        <h4>Examples</h4>
+        <ul>
+          <li><a href="#examples">Tutorial Chapters</a></li>
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/nalystresearch/neurova">GitHub</a>
+          </li>
+          <li><a href="https://pypi.org/project/neurova/">PyPI</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <button class="sidebar-toggle">
+          <i class="fa-solid fa-list"></i> Navigation
+        </button>
+        <h1 id="overview">Neurova Documentation</h1>
+        <p>
+          A complete Python library for image processing, computer vision, deep
+          learning, and classical machine learning. One install, one namespace -
+          go from raw image to trained model without switching tools.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn" href="https://pypi.org/project/neurova/"
+            ><i class="fa-solid fa-download"></i> Install from PyPI</a
+          >
+          <a
+            class="btn secondary"
+            href="https://github.com/nalystresearch/neurova"
+            ><i class="fa-brands fa-github"></i> View on GitHub</a
+          >
+        </div>
+
+        <div class="feature-grid">
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-image icon-accent"></i> Image Processing
+            </h3>
+            <p>
+              Color spaces, filters, transformations, morphology, and
+              segmentation.
+            </p>
+          </div>
+          <div class="card">
+            <h3><i class="fa-solid fa-eye icon-accent"></i> Computer Vision</h3>
+            <p>
+              Face detection, object detection, feature matching, and video
+              processing.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-brain icon-accent"></i> Machine Learning
+            </h3>
+            <p>
+              Classification, regression, clustering, SVM, and dimensionality
+              reduction.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-network-wired icon-accent"></i> Deep
+              Learning
+            </h3>
+            <p>
+              Neural networks, CNNs, RNNs, Transformers, and automatic
+              differentiation.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-database icon-accent"></i> Built-in Datasets
+            </h3>
+            <p>
+              Iris, Titanic, Fashion-MNIST, time series, and cascade classifiers
+              included.
+            </p>
+          </div>
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-bolt icon-accent"></i> GPU Acceleration
+            </h3>
+            <p>Optional CuPy backend for 10-100x speedups on NVIDIA GPUs.</p>
+          </div>
+        </div>
+
+        <!-- INSTALLATION -->
+        <h2 id="installation">Installation</h2>
+        <p>Install Neurova from PyPI:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button># Basic installation
+pip install neurova</pre>
+
+        <p>With GPU support (NVIDIA GPUs):</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>pip install neurova cupy-cuda12x  # Replace 12x with your CUDA version</pre>
+
+        <p>Development installation:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>git clone https://github.com/nalystresearch/neurova.git
+cd neurova
+pip install -e ".[dev]"</pre>
+
+        <!-- QUICK START -->
+        <h2 id="quickstart">Quick Start</h2>
+        <p>Load, process, and save an image in just a few lines:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+
+# Load image
+img = nv.io.read_image("photo.jpg")
+
+# Apply transformations
+gray = nv.core.to_grayscale(img)
+blurred = nv.filters.gaussian_blur(gray, kernel_size=5)
+edges = nv.filters.canny_edges(blurred, low=50, high=150)
+
+# Save result
+nv.io.write_image("edges.jpg", edges)</pre>
+
+        <!-- CORE OPERATIONS -->
+        <h2 id="core">Core Operations</h2>
+        <p>Basic image manipulation and color space operations:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import io, core, transform
+
+# Load image
+img = io.read_image("photo.jpg")
+
+# Color space conversions
+gray = core.to_grayscale(img)
+hsv = core.convert_color_space(img, core.ColorSpace.BGR, core.ColorSpace.HSV)
+lab = core.convert_color_space(img, core.ColorSpace.BGR, core.ColorSpace.LAB)
+
+# Image transformations
+resized = transform.resize(img, width=800, height=600)
+rotated = core.rotate(img, core.ROTATE_90_CLOCKWISE)  # 90/180/270 degree rotation
+rotated_angle = transform.rotate(img, angle=45)       # Any angle rotation
+flipped_h = core.flip(img, core.FLIP_HORIZONTAL)
+flipped_v = core.flip(img, core.FLIP_VERTICAL)
+
+# Image arithmetic
+added = core.add(img1, img2)
+subtracted = core.subtract(img1, img2)
+weighted = core.addWeighted(img1, 0.7, img2, 0.3, gamma=0)
+diff = core.absdiff(img1, img2)
+
+# Channel operations
+channels = core.split(img)  # Split into B, G, R channels
+merged = core.merge(channels)  # Merge back</pre>
+
+        <!-- FILTERS -->
+        <h2 id="filters">Filters & Effects</h2>
+        <p>
+          Apply convolution filters, blur, edge detection, and morphological
+          operations:
+        </p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import filters
+
+img = nv.io.read_image("photo.jpg")
+
+# Blur filters
+blurred = filters.gaussian_blur(img, kernel_size=5)
+median = filters.median_blur(img, kernel_size=3)
+bilateral = filters.bilateralFilter(img, d=9, sigmaColor=75, sigmaSpace=75)
+
+# Edge detection
+edges_canny = filters.canny_edges(img, low=50, high=150)
+edges_sobel = filters.sobel(img)
+edges_laplacian = filters.laplacian(img)
+
+# Sharpening
+sharpened = filters.sharpen(img)
+
+# Morphological operations
+from neurova import morphology
+dilated = morphology.dilate(binary_img, kernel_size=3)
+eroded = morphology.erode(binary_img, kernel_size=3)
+opened = morphology.opening(binary_img, kernel_size=3)
+closed = morphology.closing(binary_img, kernel_size=3)</pre>
+
+        <!-- TRANSFORMATIONS -->
+        <h2 id="transform">Transformations</h2>
+        <p>Geometric transformations and image enhancement:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import transform, core
+
+img = nv.io.read_image("photo.jpg")
+
+# Resize (fixed dimensions)
+resized = transform.resize(img, width=800, height=600)
+
+# Rotation (any angle)
+rotated = transform.rotate(img, angle=45)
+
+# Flip (using core module)
+flipped_h = core.flip(img, core.FLIP_HORIZONTAL)
+flipped_v = core.flip(img, core.FLIP_VERTICAL)
+
+# Affine warp (using 2x3 transformation matrix)
+M = transform.get_rotation_matrix2d(center=(img.shape[1]//2, img.shape[0]//2), angle=30, scale=1.0)
+warped = transform.warp_affine(img, M, output_size=(img.shape[1], img.shape[0]))</pre>
+
+        <!-- SEGMENTATION -->
+        <h2 id="segmentation">Segmentation</h2>
+        <p>Image segmentation techniques:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import segmentation
+
+img = nv.io.read_image("photo.jpg")
+gray = nv.core.to_grayscale(img)
+
+# Thresholding
+binary = segmentation.apply_threshold(gray, value=127)
+otsu = segmentation.otsu_threshold(gray)
+
+# Contour detection
+contours = segmentation.find_contours(binary)
+print(f"Found {len(contours)} contours")
+
+# Connected component labeling
+labeled, num_labels = segmentation.label_connected_components(binary)
+print(f"Found {num_labels} connected components")
+
+# Region properties analysis
+regions = segmentation.regionprops(labeled)
+for region in regions:
+    print(f"Region {region.label}: area={region.area}, centroid={region.centroid}")
+
+# Watershed segmentation (for overlapping objects)
+labels = segmentation.watershed_segmentation(img, markers)</pre>
+
+        <!-- FEATURES -->
+        <h2 id="features">Feature Detection</h2>
+        <p>Detect and match keypoints, corners, and edges:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import features
+
+# Load images
+img1 = nv.io.read_image("scene1.jpg")
+img2 = nv.io.read_image("scene2.jpg")
+gray1 = nv.core.to_grayscale(img1)
+gray2 = nv.core.to_grayscale(img2)
+
+# Corner detection
+harris_corners = features.detect_corners(gray1, method="harris")
+shi_tomasi = features.detect_corners(gray1, method="shi_tomasi", max_corners=100)
+
+# ORB keypoint detection and description
+orb = features.ORB_create(nfeatures=500)
+kp1, desc1 = orb.detectAndCompute(gray1, None)
+kp2, desc2 = orb.detectAndCompute(gray2, None)
+
+# SIFT features (more accurate, slower)
+sift = features.SIFT_create()
+kp_sift, desc_sift = sift.detectAndCompute(gray1, None)
+
+# Brute-force matching
+bf = features.BFMatcher_create(features.NORM_HAMMING, crossCheck=True)
+matches = bf.match(desc1, desc2)
+matches = sorted(matches, key=lambda x: x.distance)
+
+# Visualize matches
+result = features.drawMatches(img1, kp1, img2, kp2, matches[:50], None)
+nv.io.write_image("matches.jpg", result)</pre>
+
+        <!-- FACE DETECTION -->
+        <h2 id="face">Face Detection & Recognition</h2>
+        <p>Detect and recognize faces using built-in cascade classifiers:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import datasets, imgproc
+from neurova.face import FaceDetector, FaceRecognizer
+
+# Load sample image (bundled with neurova)
+img = datasets.load_sample_image('lena')
+
+# Face detection with Haar cascades
+detector = FaceDetector(method='haar')
+faces = detector.detect(img)
+
+for (x, y, w, h) in faces:
+    print(f"Face at ({x}, {y}) size {w}x{h}")
+    imgproc.rectangle(img, (x, y), (x+w, y+h), color=(0, 255, 0), thickness=2)
+
+# Save result
+nv.io.write_image("detected_faces.jpg", img)</pre>
+
+        <p>Face recognition with training:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.face import FaceRecognizer, FaceDataset, FaceTrainer
+
+# Load face dataset
+dataset = FaceDataset("path/to/faces")
+
+# Train recognizer
+trainer = FaceTrainer()
+recognizer = trainer.train(dataset)
+
+# Recognize faces
+label, confidence = recognizer.predict(face_image)</pre>
+
+        <!-- OBJECT DETECTION -->
+        <h2 id="object-detection">Object Detection</h2>
+        <p>Neurova object detection with training support:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.object_detection import ObjectDetector, DetectionDataset, DetectionTrainer
+
+# Load pre-trained detector
+detector = ObjectDetector()
+
+# Detect objects in image
+detections = detector.detect(img)
+
+for det in detections:
+    print(f"Class: {det.class_name}, Confidence: {det.confidence:.2f}")
+    print(f"Bounding box: {det.bbox}")
+
+# Train custom detector
+dataset = DetectionDataset("path/to/dataset")
+trainer = DetectionTrainer()
+model = trainer.train(dataset, epochs=100)</pre>
+
+        <!-- VIDEO PROCESSING -->
+        <h2 id="video">Video Processing</h2>
+        <p>Video capture, processing, and tracking:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+from neurova import video, highgui
+from neurova.nvc import VideoCapture
+
+# Open video file or webcam
+cap = VideoCapture("input.mp4")  # or VideoCapture(0) for webcam
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    
+    # Process frame
+    gray = nv.core.to_grayscale(frame)
+    edges = nv.filters.canny_edges(gray, low=50, high=150)
+    
+    # Display
+    highgui.imshow("Edges", edges)
+    if highgui.waitKey(1) == ord('q'):
+        break
+
+cap.release()</pre>
+
+        <p>Object tracking:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.video import TrackerKCF_create, TrackerCSRT_create
+
+# Create tracker (KCF is fast, CSRT is more accurate)
+tracker = TrackerKCF_create()
+
+# Initialize with first frame and bounding box (x, y, w, h)
+bbox = (100, 100, 200, 150)
+tracker.init(frame, bbox)
+
+# Track in subsequent frames
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    success, new_bbox = tracker.update(frame)
+    if success:
+        x, y, w, h = [int(v) for v in new_bbox]
+        imgproc.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)</pre>
+
+        <!-- DATA PREPROCESSING -->
+        <h2 id="ml-preprocessing">ML: Preprocessing</h2>
+        <p>Essential data preprocessing tools:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    StandardScaler, MinMaxScaler, RobustScaler, MaxAbsScaler,
+    LabelEncoder, OneHotEncoder, 
+    SimpleImputer, KNNImputer
+)
+
+# SCALING DATA
+# StandardScaler: zero mean, unit variance
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# MinMaxScaler: scale to [0, 1] range
+minmax = MinMaxScaler()
+X_minmax = minmax.fit_transform(X)
+
+# RobustScaler: handles outliers using median/IQR
+robust = RobustScaler()
+X_robust = robust.fit_transform(X)
+
+# MaxAbsScaler: scale to [-1, 1] preserving sparsity
+maxabs = MaxAbsScaler()
+X_maxabs = maxabs.fit_transform(X)
+
+# ENCODING CATEGORICAL DATA
+# LabelEncoder: convert labels to integers
+encoder = LabelEncoder()
+y_encoded = encoder.fit_transform(['cat', 'dog', 'bird', 'cat'])
+
+# OneHotEncoder: convert to one-hot vectors
+onehot = OneHotEncoder()
+y_onehot = onehot.fit_transform(y.reshape(-1, 1))
+
+# HANDLING MISSING DATA
+# SimpleImputer: fill with mean, median, or constant
+imputer = SimpleImputer(strategy='mean')
+X_filled = imputer.fit_transform(X_with_nan)
+
+# KNNImputer: fill using k-nearest neighbors
+knn_imputer = KNNImputer(n_neighbors=5)
+X_filled = knn_imputer.fit_transform(X_with_nan)</pre>
+
+        <h3>Feature Selection</h3>
+        <p>Select the most important features:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    SelectKBest, SelectPercentile, RFE, VarianceThreshold,
+    f_classif, f_regression, mutual_info_classif
+)
+
+# Remove low variance features
+selector = VarianceThreshold(threshold=0.1)
+X_high_var = selector.fit_transform(X)
+
+# Select K best features using statistical test
+kbest = SelectKBest(score_func=f_classif, k=10)
+X_best = kbest.fit_transform(X, y)
+print(f"Selected features: {kbest.get_support(indices=True)}")
+print(f"Feature scores: {kbest.scores_}")
+
+# Select top percentile features
+percentile = SelectPercentile(score_func=f_classif, percentile=50)
+X_top = percentile.fit_transform(X, y)
+
+# Recursive Feature Elimination
+from neurova.ml import RandomForestClassifier
+model = RandomForestClassifier()
+rfe = RFE(estimator=model, n_features_to_select=5)
+X_rfe = rfe.fit_transform(X, y)
+print(f"Feature ranking: {rfe.ranking_}")</pre>
+
+        <!-- MACHINE LEARNING -->
+        <h2 id="ml-classification">ML: Classification</h2>
+        <p>Classification algorithms with built-in datasets:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.ml import (
+    KNearestNeighbors, LogisticRegression, NaiveBayes,
+    DecisionTreeClassifier, RandomForestClassifier, SVM
+)
+
+# Load built-in dataset
+df = datasets.load_iris()
+X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].values
+y = df['species'].astype('category').cat.codes.values
+
+# K-Nearest Neighbors
+knn = KNearestNeighbors(n_neighbors=3)
+knn.fit(X, y)
+predictions = knn.predict(X[:5])
+
+# Logistic Regression
+logreg = LogisticRegression(C=1.0)
+logreg.fit(X, y)
+probabilities = logreg.predict_proba(X[:5])
+
+# Naive Bayes
+nb = NaiveBayes()
+nb.fit(X, y)
+
+# Decision Tree
+tree = DecisionTreeClassifier(max_depth=5)
+tree.fit(X, y)
+
+# Random Forest
+rf = RandomForestClassifier(n_estimators=100)
+rf.fit(X, y)
+
+# Support Vector Machine
+svm = SVM(kernel='rbf')
+svm.fit(X, y)</pre>
+
+        <h2 id="ml-regression">ML: Regression</h2>
+        <p>Comprehensive regression algorithms:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.ml import (
+    LinearRegression, Ridge, Lasso, ElasticNet,
+    BayesianRidge, HuberRegressor, QuantileRegressor,
+    SVR, KernelRidge, GaussianProcessRegressor,
+    Lars, OrthogonalMatchingPursuit
+)
+
+# Load dataset
+df = datasets.load_boston_housing()
+X = df.drop('MEDV', axis=1).values
+y = df['MEDV'].values
+
+# Linear Regression
+lr = LinearRegression()
+lr.fit(X, y)
+predictions = lr.predict(X)
+
+# Ridge Regression (L2 regularization)
+ridge = Ridge(alpha=1.0)
+ridge.fit(X, y)
+
+# Lasso Regression (L1 regularization - sparse solutions)
+lasso = Lasso(alpha=0.1)
+lasso.fit(X, y)
+print(f"Non-zero coefficients: {(lasso.coef_ != 0).sum()}")
+
+# ElasticNet (L1 + L2 regularization)
+elastic = ElasticNet(alpha=1.0, l1_ratio=0.5)
+elastic.fit(X, y)
+
+# Bayesian Ridge (probabilistic regression)
+bayesian = BayesianRidge()
+bayesian.fit(X, y)
+mean, std = bayesian.predict(X, return_std=True)
+
+# Huber Regressor (robust to outliers)
+huber = HuberRegressor(epsilon=1.35)
+huber.fit(X, y)
+
+# Support Vector Regression
+svr = SVR(kernel='rbf', C=1.0, epsilon=0.1)
+svr.fit(X, y)
+
+# Kernel Ridge Regression
+kr = KernelRidge(kernel='rbf', alpha=1.0)
+kr.fit(X, y)
+
+# Gaussian Process Regression
+gpr = GaussianProcessRegressor()
+gpr.fit(X, y)
+mean, std = gpr.predict(X, return_std=True)</pre>
+
+        <h3>SVM & Gaussian Processes</h3>
+        <p>Support Vector Machines and Gaussian Process models:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    SVC, SVR, KernelRidge,
+    GaussianProcessClassifier, GaussianProcessRegressor
+)
+
+# Support Vector Classification
+svc = SVC(kernel='rbf', C=1.0, gamma='scale')
+svc.fit(X_train, y_train)
+predictions = svc.predict(X_test)
+
+# Get probability estimates
+svc_prob = SVC(kernel='rbf', probability=True)
+svc_prob.fit(X_train, y_train)
+probabilities = svc_prob.predict_proba(X_test)
+
+# Different kernels
+svc_linear = SVC(kernel='linear')
+svc_poly = SVC(kernel='poly', degree=3)
+svc_sigmoid = SVC(kernel='sigmoid')
+
+# Gaussian Process Classifier
+gpc = GaussianProcessClassifier()
+gpc.fit(X_train, y_train)
+probabilities = gpc.predict_proba(X_test)</pre>
+
+        <h2 id="ml-clustering">ML: Clustering</h2>
+        <p>Clustering algorithms:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.ml import (
+    KMeans, MiniBatchKMeans, DBSCAN, AgglomerativeClustering,
+    MeanShift, SpectralClustering, OPTICS, GaussianMixture, Birch
+)
+
+# Load clustering dataset
+df = datasets.load_mall_customers()
+X = df[['Annual Income (k$)', 'Spending Score (1-100)']].values
+
+# K-Means
+kmeans = KMeans(n_clusters=5)
+kmeans.fit(X)
+labels = kmeans.predict(X)
+centers = kmeans.cluster_centers_
+
+# Mini-Batch K-Means (faster for large datasets)
+mbkmeans = MiniBatchKMeans(n_clusters=5, batch_size=100)
+mbkmeans.fit(X)
+
+# DBSCAN (density-based, no n_clusters needed)
+dbscan = DBSCAN(eps=5, min_samples=3)
+dbscan.fit(X)
+labels = dbscan.labels_
+
+# OPTICS (improved DBSCAN)
+optics = OPTICS(min_samples=5, xi=0.05)
+optics.fit(X)
+
+# Agglomerative Clustering (hierarchical)
+hc = AgglomerativeClustering(n_clusters=5, linkage='ward')
+hc.fit(X)
+
+# Mean Shift (finds clusters automatically)
+meanshift = MeanShift(bandwidth=2)
+meanshift.fit(X)
+
+# Spectral Clustering (graph-based)
+spectral = SpectralClustering(n_clusters=5, affinity='rbf')
+spectral.fit(X)
+
+# Gaussian Mixture Model (probabilistic)
+gmm = GaussianMixture(n_components=5, covariance_type='full')
+gmm.fit(X)
+probabilities = gmm.predict_proba(X)
+
+# BIRCH (for large datasets)
+birch = Birch(n_clusters=5, threshold=0.5)
+birch.fit(X)</pre>
+
+        <h2 id="ml-reduction">ML: Dimensionality Reduction</h2>
+        <p>Reduce feature dimensions for visualization and efficiency:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.ml import (
+    PCA, TSNE, LDA, KernelPCA,
+    Isomap, MDS, LocallyLinearEmbedding, SpectralEmbedding,
+    TruncatedSVD, FactorAnalysis, NMF
+)
+
+# Load high-dimensional data
+df = datasets.load_iris()
+X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].values
+y = df['species'].astype('category').cat.codes.values
+
+# Principal Component Analysis
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X)
+print(f"Explained variance: {pca.explained_variance_ratio_}")
+
+# Kernel PCA (for non-linear data)
+kpca = KernelPCA(n_components=2, kernel='rbf')
+X_kpca = kpca.fit_transform(X)
+
+# t-SNE for visualization
+tsne = TSNE(n_components=2, perplexity=30)
+X_tsne = tsne.fit_transform(X)
+
+# Linear Discriminant Analysis (supervised)
+lda = LDA(n_components=2)
+X_lda = lda.fit_transform(X, y)
+
+# Isomap (manifold learning)
+isomap = Isomap(n_components=2, n_neighbors=5)
+X_isomap = isomap.fit_transform(X)
+
+# MDS (Multidimensional Scaling)
+mds = MDS(n_components=2)
+X_mds = mds.fit_transform(X)
+
+# Locally Linear Embedding
+lle = LocallyLinearEmbedding(n_components=2, n_neighbors=10)
+X_lle = lle.fit_transform(X)
+
+# Spectral Embedding
+se = SpectralEmbedding(n_components=2)
+X_se = se.fit_transform(X)
+
+# Truncated SVD (for sparse data)
+svd = TruncatedSVD(n_components=2)
+X_svd = svd.fit_transform(X)
+
+# Factor Analysis
+fa = FactorAnalysis(n_components=2)
+X_fa = fa.fit_transform(X)
+
+# Non-negative Matrix Factorization
+nmf = NMF(n_components=2)
+X_nmf = nmf.fit_transform(X_positive)</pre>
+
+        <!-- MODEL EVALUATION -->
+        <h2 id="ml-evaluation">ML: Model Evaluation</h2>
+        <p>Evaluate your models with comprehensive metrics:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    accuracy_score, precision_score, recall_score, f1_score,
+    confusion_matrix, classification_report,
+    mean_squared_error, mean_absolute_error, r2_score
+)
+
+# CLASSIFICATION METRICS
+y_true = [0, 1, 1, 0, 1, 0, 1, 1]
+y_pred = [0, 1, 0, 0, 1, 1, 1, 1]
+
+# Basic metrics
+acc = accuracy_score(y_true, y_pred)
+prec = precision_score(y_true, y_pred)
+rec = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+
+print(f"Accuracy: {acc:.3f}")
+print(f"Precision: {prec:.3f}")
+print(f"Recall: {rec:.3f}")
+print(f"F1 Score: {f1:.3f}")
+
+# Confusion Matrix
+cm = confusion_matrix(y_true, y_pred)
+print(f"Confusion Matrix:\n{cm}")
+
+# Full classification report
+report = classification_report(y_true, y_pred)
+print(report)
+
+# REGRESSION METRICS
+y_true_reg = [3.0, 2.5, 4.0, 5.5]
+y_pred_reg = [2.8, 2.6, 3.9, 5.2]
+
+mse = mean_squared_error(y_true_reg, y_pred_reg)
+mae = mean_absolute_error(y_true_reg, y_pred_reg)
+r2 = r2_score(y_true_reg, y_pred_reg)
+
+print(f"MSE: {mse:.4f}")
+print(f"MAE: {mae:.4f}")
+print(f"R² Score: {r2:.4f}")</pre>
+
+        <!-- CROSS VALIDATION -->
+        <h2 id="ml-validation">ML: Cross-Validation</h2>
+        <p>Robust model validation techniques:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    train_test_split, cross_validate,
+    KFold, StratifiedKFold, GroupKFold, LeaveOneOut, TimeSeriesSplit,
+    GridSearchCV, RandomizedSearchCV
+)
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# K-Fold Cross-Validation
+kfold = KFold(n_splits=5, shuffle=True, random_state=42)
+for train_idx, val_idx in kfold.split(X):
+    X_train, X_val = X[train_idx], X[val_idx]
+    y_train, y_val = y[train_idx], y[val_idx]
+    # Train and evaluate...
+
+# Stratified K-Fold (preserves class distribution)
+skfold = StratifiedKFold(n_splits=5)
+for train_idx, val_idx in skfold.split(X, y):
+    # Train and evaluate...
+
+# Time Series Split (for temporal data)
+tscv = TimeSeriesSplit(n_splits=5)
+for train_idx, val_idx in tscv.split(X):
+    # Train on past, validate on future...
+
+# Cross-validate with scoring
+from neurova.ml import RandomForestClassifier
+model = RandomForestClassifier()
+scores = cross_validate(model, X, y, cv=5, scoring='accuracy')
+print(f"CV Scores: {scores['test_score']}")
+print(f"Mean: {scores['test_score'].mean():.3f} ± {scores['test_score'].std():.3f}")</pre>
+
+        <h3>Hyperparameter Tuning</h3>
+        <p>Find optimal hyperparameters:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import GridSearchCV, RandomizedSearchCV, RandomForestClassifier
+
+# Grid Search - exhaustive search
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'max_depth': [5, 10, None],
+    'min_samples_split': [2, 5, 10]
+}
+model = RandomForestClassifier()
+grid_search = GridSearchCV(model, param_grid, cv=5, scoring='accuracy')
+grid_search.fit(X_train, y_train)
+
+print(f"Best params: {grid_search.best_params_}")
+print(f"Best score: {grid_search.best_score_:.3f}")
+best_model = grid_search.best_estimator_
+
+# Randomized Search - faster for large search spaces
+param_dist = {
+    'n_estimators': [50, 100, 150, 200],
+    'max_depth': [5, 10, 15, 20, None],
+    'min_samples_split': range(2, 20)
+}
+random_search = RandomizedSearchCV(
+    model, param_dist, n_iter=20, cv=5, random_state=42
+)
+random_search.fit(X_train, y_train)
+print(f"Best params: {random_search.best_params_}")</pre>
+
+        <!-- PIPELINES -->
+        <h2 id="ml-pipeline">ML: Pipelines</h2>
+        <p>Chain preprocessing and modeling steps:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    Pipeline, ColumnTransformer, FeatureUnion, make_pipeline,
+    StandardScaler, SimpleImputer, SelectKBest, f_classif,
+    RandomForestClassifier
+)
+
+# Simple pipeline
+pipe = Pipeline([
+    ('scaler', StandardScaler()),
+    ('selector', SelectKBest(k=10)),
+    ('classifier', RandomForestClassifier())
+])
+
+# Fit entire pipeline
+pipe.fit(X_train, y_train)
+
+# Predict (automatically applies all transformations)
+predictions = pipe.predict(X_test)
+
+# Using make_pipeline (auto-generates step names)
+pipe = make_pipeline(
+    StandardScaler(),
+    SelectKBest(k=10),
+    RandomForestClassifier()
+)
+
+# ColumnTransformer for mixed data types
+from neurova.ml import OneHotEncoder, MinMaxScaler
+
+numeric_features = ['age', 'income', 'score']
+categorical_features = ['gender', 'city', 'category']
+
+preprocessor = ColumnTransformer([
+    ('num', Pipeline([
+        ('imputer', SimpleImputer(strategy='mean')),
+        ('scaler', StandardScaler())
+    ]), numeric_features),
+    ('cat', Pipeline([
+        ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+        ('onehot', OneHotEncoder(handle_unknown='ignore'))
+    ]), categorical_features)
+])
+
+# Full pipeline with mixed preprocessing
+full_pipeline = Pipeline([
+    ('preprocessor', preprocessor),
+    ('classifier', RandomForestClassifier())
+])
+full_pipeline.fit(X_train, y_train)</pre>
+
+        <!-- STATISTICAL TESTS -->
+        <h2 id="ml-stats">ML: Statistical Tests</h2>
+        <p>Statistical hypothesis testing:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    ttest_ind, ttest_1samp, ttest_rel,
+    f_oneway, chi2_contingency, kstest
+)
+
+# T-test: compare means of two groups
+group_a = [23, 25, 28, 31, 27, 29, 24, 26]
+group_b = [30, 32, 35, 33, 31, 34, 36, 32]
+
+# Independent two-sample t-test
+t_stat, p_value = ttest_ind(group_a, group_b)
+print(f"T-statistic: {t_stat:.3f}, P-value: {p_value:.4f}")
+if p_value &lt; 0.05:
+    print("Significant difference between groups")
+
+# One-sample t-test (compare to known mean)
+t_stat, p_value = ttest_1samp(group_a, popmean=25)
+print(f"Sample mean vs 25: p={p_value:.4f}")
+
+# Paired t-test (before/after comparison)
+before = [150, 160, 155, 170, 165]
+after = [145, 155, 150, 160, 160]
+t_stat, p_value = ttest_rel(before, after)
+print(f"Paired test: p={p_value:.4f}")
+
+# ANOVA: compare means of 3+ groups
+group_c = [28, 30, 29, 32, 31]
+f_stat, p_value = f_oneway(group_a, group_b, group_c)
+print(f"ANOVA F={f_stat:.3f}, p={p_value:.4f}")
+
+# Chi-square test for categorical data
+observed = [[10, 20, 30], [6, 9, 17]]
+chi2, p_value, dof, expected = chi2_contingency(observed)
+print(f"Chi-square: {chi2:.3f}, p={p_value:.4f}")
+
+# Kolmogorov-Smirnov test (test distribution)
+from neurova.ml import kstest
+data = [0.5, 0.3, 0.8, 0.2, 0.9, 0.4]
+stat, p_value = kstest(data, 'norm')
+print(f"KS test: statistic={stat:.3f}, p={p_value:.4f}")</pre>
+
+        <!-- ENSEMBLE METHODS -->
+        <h2 id="ml-ensemble">ML: Ensemble Methods</h2>
+        <p>Combine multiple models for better performance:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.ml import (
+    RandomForestClassifier, RandomForestRegressor,
+    GradientBoostingClassifier, GradientBoostingRegressor,
+    AdaBoostClassifier, AdaBoostRegressor,
+    BaggingClassifier, BaggingRegressor,
+    DecisionTreeClassifier
+)
+
+# Random Forest (bagging with decision trees)
+rf = RandomForestClassifier(
+    n_estimators=100,
+    max_depth=10,
+    min_samples_split=5,
+    random_state=42
+)
+rf.fit(X_train, y_train)
+print(f"Feature importances: {rf.feature_importances_}")
+
+# Gradient Boosting
+gb = GradientBoostingClassifier(
+    n_estimators=100,
+    learning_rate=0.1,
+    max_depth=3
+)
+gb.fit(X_train, y_train)
+
+# AdaBoost
+ada = AdaBoostClassifier(
+    base_estimator=DecisionTreeClassifier(max_depth=1),
+    n_estimators=50,
+    learning_rate=1.0
+)
+ada.fit(X_train, y_train)
+
+# Bagging (with any base estimator)
+bagging = BaggingClassifier(
+    base_estimator=DecisionTreeClassifier(),
+    n_estimators=10,
+    max_samples=0.8,
+    max_features=0.8
+)
+bagging.fit(X_train, y_train)</pre>
+
+        <!-- TIME SERIES -->
+        <h2 id="timeseries">Time Series Analysis</h2>
+        <p>Comprehensive time series modeling and analysis:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.timeseries import (
+    ARIMA, auto_arima,
+    SimpleExponentialSmoothing, ExponentialSmoothing,
+    seasonal_decompose, stl_decompose,
+    acf, pacf, adfuller, ljung_box
+)
+from neurova import datasets
+
+# Load time series data
+df = datasets.load_airline_passengers()
+ts = df['Passengers'].values
+
+# ARIMA Model
+model = ARIMA(order=(1, 1, 1))
+model.fit(ts)
+forecast = model.predict(steps=12)
+
+# Auto ARIMA (automatic parameter selection)
+auto_model = auto_arima(ts, seasonal=True, m=12)
+forecast = auto_model.predict(steps=12)
+
+# Exponential Smoothing
+# Simple exponential smoothing
+ses = SimpleExponentialSmoothing(ts)
+ses.fit()
+forecast = ses.predict(steps=12)
+
+# Holt-Winters exponential smoothing
+hw = ExponentialSmoothing(ts, trend='add', seasonal='add', seasonal_periods=12)
+hw.fit()
+forecast = hw.predict(steps=12)
+
+# Time Series Decomposition
+# Classical decomposition
+result = seasonal_decompose(ts, period=12)
+trend = result.trend
+seasonal = result.seasonal
+residual = result.resid
+
+# STL decomposition (more robust)
+stl_result = stl_decompose(ts, period=12)
+
+# Statistical Tests
+# Autocorrelation function
+acf_values = acf(ts, nlags=20)
+pacf_values = pacf(ts, nlags=20)
+
+# Augmented Dickey-Fuller test (stationarity)
+adf_stat, p_value = adfuller(ts)
+if p_value &lt; 0.05:
+    print("Series is stationary")
+else:
+    print("Series is non-stationary, differencing needed")
+
+# Ljung-Box test (autocorrelation)
+lb_stat, lb_p_value = ljung_box(ts, lags=10)</pre>
+
+        <!-- DATA AUGMENTATION -->
+        <h2 id="augmentation">Data Augmentation</h2>
+        <p>Image augmentation for deep learning:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.augmentation import (
+    Compose, RandomApply, RandomChoice, RandomOrder,
+    # Geometric transforms
+    Resize, RandomCrop, CenterCrop, RandomResizedCrop,
+    RandomHorizontalFlip, RandomVerticalFlip,
+    RandomRotation, RandomAffine, RandomPerspective,
+    # Color transforms
+    ColorJitter, RandomGrayscale, GaussianBlur,
+    RandomInvert, RandomPosterize, RandomSolarize,
+    # Advanced transforms
+    ElasticTransform, GridDistortion, OpticalDistortion, CLAHE
+)
+
+# Compose multiple transforms
+transform = Compose([
+    Resize((256, 256)),
+    RandomCrop((224, 224)),
+    RandomHorizontalFlip(p=0.5),
+    RandomRotation(degrees=15),
+    ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
+    GaussianBlur(kernel_size=3, sigma=(0.1, 2.0))
+])
+
+# Apply to image
+augmented = transform(image)
+
+# Random apply (50% chance)
+transform = RandomApply([
+    RandomRotation(30),
+    ColorJitter(brightness=0.5)
+], p=0.5)
+
+# Random choice (pick one randomly)
+transform = RandomChoice([
+    RandomHorizontalFlip(p=1.0),
+    RandomVerticalFlip(p=1.0),
+    RandomRotation(90)
+])
+
+# Training augmentation pipeline
+train_transform = Compose([
+    RandomResizedCrop(224, scale=(0.8, 1.0)),
+    RandomHorizontalFlip(p=0.5),
+    ColorJitter(brightness=0.2, contrast=0.2),
+    RandomGrayscale(p=0.1),
+])
+
+# Color space conversions
+from neurova.augmentation import RGBToHSV, HSVToRGB, RGBToLAB, LABToRGB
+hsv_image = RGBToHSV()(rgb_image)
+lab_image = RGBToLAB()(rgb_image)</pre>
+
+        <!-- NEURAL NETWORKS -->
+        <h2 id="neural">Neural Networks</h2>
+        <p>Build and train neural networks with automatic differentiation:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.neural import layers, Tensor, optim
+
+# Load Fashion-MNIST (bundled with neurova)
+(train_images, train_labels), (test_images, test_labels) = datasets.load_fashion_mnist()
+
+# Create a simple neural network
+model = layers.Sequential([
+    layers.Linear(784, 256),
+    layers.ReLU(),
+    layers.Dropout(p=0.2),
+    layers.Linear(256, 128),
+    layers.ReLU(),
+    layers.Linear(128, 10),
+    layers.Softmax()
+])
+
+# Define optimizer
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Training loop
+for epoch in range(10):
+    for batch_x, batch_y in dataloader:
+        output = model.forward(batch_x)
+        loss = compute_loss(output, batch_y)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    print(f"Epoch {epoch + 1}, Loss: {loss.value:.4f}")</pre>
+
+        <p>Convolutional Neural Network:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.neural import layers
+
+# Create CNN
+cnn = layers.Sequential([
+    layers.Conv2D(in_channels=1, out_channels=32, kernel_size=3, padding=1),
+    layers.ReLU(),
+    layers.MaxPool2D(kernel_size=2),
+    layers.Conv2D(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+    layers.ReLU(),
+    layers.MaxPool2D(kernel_size=2),
+    layers.Flatten(),
+    layers.Linear(64 * 7 * 7, 128),
+    layers.ReLU(),
+    layers.Dropout(p=0.5),
+    layers.Linear(128, 10)
+])</pre>
+
+        <!-- PRE-BUILT ARCHITECTURES -->
+        <h2 id="architectures">Pre-built Architectures</h2>
+        <p>Ready-to-use neural network architectures:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.architecture import (
+    MLP, CNN, LSTM, GRU, Transformer,
+    Autoencoder, VAE, GAN,
+    create_cnn, create_mlp, create_transformer
+)
+
+# Multi-Layer Perceptron
+mlp = MLP(input_size=784, hidden_sizes=[256, 128], output_size=10)
+
+# Convolutional Neural Network
+cnn = CNN(input_channels=3, num_classes=10)
+
+# LSTM for sequences
+lstm = LSTM(input_size=100, hidden_size=256, num_layers=2)
+
+# Transformer
+transformer = Transformer(
+    d_model=512,
+    nhead=8,
+    num_encoder_layers=6,
+    num_decoder_layers=6
+)
+
+# Autoencoder
+autoencoder = Autoencoder(input_dim=784, latent_dim=32)
+
+# Variational Autoencoder
+vae = VAE(input_dim=784, latent_dim=32)
+
+# Generative Adversarial Network
+gan = GAN(latent_dim=100, output_shape=(1, 28, 28))</pre>
+
+        <p>Hyperparameter tuning:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova.architecture import GridSearchCV, RandomSearchCV, AutoML
+
+# Grid Search
+grid_search = GridSearchCV(model, param_grid, cv=5)
+best_params = grid_search.fit(X, y)
+
+# Random Search
+random_search = RandomSearchCV(model, param_distributions, n_iter=100)
+best_params = random_search.fit(X, y)
+
+# AutoML
+automl = AutoML(task='classification', max_time=3600)
+best_model = automl.fit(X, y)</pre>
+
+        <!-- GPU ACCELERATION -->
+        <h2 id="gpu">GPU Acceleration</h2>
+        <p>Enable GPU acceleration for massive speedups:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>import neurova as nv
+
+# Check GPU availability
+print(f"GPU available: {nv.cuda_is_available()}")
+print(f"GPU device: {nv.get_device_name()}")
+print(f"Device count: {nv.get_device_count()}")
+
+# Enable GPU globally
+nv.set_device("cuda")
+
+# Or use context manager for specific operations
+with nv.device_context("cuda"):
+    img = nv.io.read_image("large_image.jpg")
+    processed = nv.filters.gaussian_blur(img, kernel_size=15)
+    edges = nv.filters.canny_edges(processed)
+
+# Memory management
+nv.empty_cache()  # Free GPU memory
+print(nv.get_memory_usage())  # Check memory usage</pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>CPU Time</th>
+              <th>GPU Time</th>
+              <th>Speedup</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gaussian Blur (4K)</td>
+              <td>150ms</td>
+              <td>3ms</td>
+              <td>50x</td>
+            </tr>
+            <tr>
+              <td>Canny Edge (4K)</td>
+              <td>200ms</td>
+              <td>5ms</td>
+              <td>40x</td>
+            </tr>
+            <tr>
+              <td>Feature Detection</td>
+              <td>500ms</td>
+              <td>10ms</td>
+              <td>50x</td>
+            </tr>
+            <tr>
+              <td>CNN Forward Pass</td>
+              <td>1000ms</td>
+              <td>10ms</td>
+              <td>100x</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- DATASETS -->
+        <h2 id="datasets-tabular">Built-in Datasets: Tabular</h2>
+        <p>Ready-to-use datasets bundled with Neurova (no download needed):</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+
+# Classification datasets
+iris = datasets.load_iris()           # 150 samples, 4 features, 3 classes
+titanic = datasets.load_titanic()     # Survival prediction
+wine = datasets.load_wine()           # Wine classification
+
+# Regression datasets
+boston = datasets.load_boston_housing()  # Housing price prediction
+diabetes = datasets.load_diabetes()      # Diabetes progression
+
+# Clustering datasets
+mall = datasets.load_mall_customers()    # Customer segmentation
+penguins = datasets.load_penguins()      # Palmer Penguins dataset
+
+# List all available datasets
+print(datasets.list_datasets())</pre>
+
+        <h2 id="datasets-images">Built-in Datasets: Images</h2>
+        <p>Sample images, Fashion-MNIST, and cascade classifiers included:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+
+# Load sample images (bundled - no download needed)
+fruits = datasets.load_sample_image('fruits')       # Colorful fruit image
+lena = datasets.load_sample_image('lena')           # Classic test image
+building = datasets.load_sample_image('building')   # Architectural features
+baboon = datasets.load_sample_image('baboon')       # Texture analysis
+chessboard = datasets.load_sample_image('chessboard')  # Calibration pattern
+sudoku = datasets.load_sample_image('sudoku')       # Document/grid processing
+
+# List all available sample images
+print(datasets.get_sample_images())  # ['baboon', 'building', 'chessboard', 'fruits', 'lena', 'sudoku']
+
+# Fashion-MNIST (70,000 grayscale 28x28 images)
+(train_images, train_labels), (test_images, test_labels) = datasets.load_fashion_mnist()
+# Classes: T-shirt, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot</pre>
+
+        <p>Cascade classifiers for detection (17 Haar, 5 LBP, 1 HOG):</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+
+# Haar cascades (17 classifiers)
+face = datasets.get_haarcascade('frontalface_default')   # Face detection
+face_alt = datasets.get_haarcascade('frontalface_alt')   # Alternative face
+eye = datasets.get_haarcascade('eye')                    # Eye detection
+smile = datasets.get_haarcascade('smile')                # Smile detection
+fullbody = datasets.get_haarcascade('fullbody')          # Full body
+upperbody = datasets.get_haarcascade('upperbody')        # Upper body
+lowerbody = datasets.get_haarcascade('lowerbody')        # Lower body
+profileface = datasets.get_haarcascade('profileface')    # Side face
+catface = datasets.get_haarcascade('frontalcatface')     # Cat face
+license_plate = datasets.get_haarcascade('russian_plate_number')  # License plates
+
+# LBP cascades (faster, less accurate)
+lbp_face = datasets.get_lbpcascade('frontalface')        # LBP face detection
+lbp_face_improved = datasets.get_lbpcascade('frontalface_improved')
+lbp_profile = datasets.get_lbpcascade('profileface')     # LBP profile face
+lbp_catface = datasets.get_lbpcascade('frontalcatface')  # LBP cat face
+lbp_silverware = datasets.get_lbpcascade('silverware')   # Silverware detection
+
+# HOG cascade
+hog_pedestrians = datasets.get_hogcascade('pedestrians')  # Pedestrian detection</pre>
+
+        <h2 id="datasets-timeseries">Built-in Datasets: Time Series</h2>
+        <p>Time series datasets for forecasting:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+from neurova.timeseries import ARIMA, ExponentialSmoothing
+
+# Load time series data
+air_passengers = datasets.load_air_passengers()    # Monthly airline passengers
+temperatures = datasets.load_daily_temperatures()   # Daily temperature readings
+sunspots = datasets.load_sunspots()                # Monthly sunspot counts
+
+# Time series analysis
+from neurova.timeseries import decomposition
+trend, seasonal, residual = decomposition.seasonal_decompose(air_passengers)
+
+# Forecasting with ARIMA
+model = ARIMA(order=(5, 1, 0))
+model.fit(air_passengers)
+forecast = model.predict(steps=12)
+
+# Exponential Smoothing
+es = ExponentialSmoothing(trend='add', seasonal='add', seasonal_periods=12)
+es.fit(air_passengers)
+forecast = es.predict(steps=12)</pre>
+
+        <h2 id="datasets-recommendation">Built-in Datasets: Recommendation</h2>
+        <p>MovieLens-100K dataset for recommendation systems:</p>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button>from neurova import datasets
+
+# MovieLens-100K (100,000 ratings from 943 users on 1682 movies)
+ratings = datasets.load_movielens_ratings()  # User-item ratings
+movies = datasets.load_movielens_movies()    # Movie information
+users = datasets.load_movielens_users()      # User demographics
+
+# Pre-split train/test sets for evaluation
+train, test = datasets.load_movielens_split('u1')  # 5 official splits available</pre>
+
+        <!-- MODULES TABLE -->
+        <h2>Complete Module Reference</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>neurova.io</code></td>
+              <td>
+                Image and video reading/writing (read_image, write_image,
+                imread, imwrite)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.core</code></td>
+              <td>
+                Color spaces, basic ops (to_grayscale, flip, rotate, split,
+                merge, add, subtract)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.imgproc</code></td>
+              <td>
+                Image processing (cvtColor, drawing, contours, thresholding)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.filters</code></td>
+              <td>
+                Convolution, blurring, edge detection (gaussian_blur, canny,
+                sobel, bilateralFilter)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.morphology</code></td>
+              <td>Morphological operations (dilate, erode, morphologyEx)</td>
+            </tr>
+            <tr>
+              <td><code>neurova.transform</code></td>
+              <td>Geometric transformations (resize, rotate, warp_affine)</td>
+            </tr>
+            <tr>
+              <td><code>neurova.segmentation</code></td>
+              <td>Thresholding, watershed, contours, region analysis</td>
+            </tr>
+            <tr>
+              <td><code>neurova.features</code></td>
+              <td>
+                Keypoint detection (ORB, SIFT, AKAZE), matching (BFMatcher)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.face</code></td>
+              <td>
+                Face detection (FaceDetector, Haar/LBP/HOG) and recognition
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.object_detection</code></td>
+              <td>Neurova object detection with training</td>
+            </tr>
+            <tr>
+              <td><code>neurova.detection</code></td>
+              <td>Template and cascade-based detection</td>
+            </tr>
+            <tr>
+              <td><code>neurova.video</code></td>
+              <td>
+                Video capture, optical flow, background subtraction, trackers
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.highgui</code></td>
+              <td>GUI functions (imshow, waitKey, window management)</td>
+            </tr>
+            <tr>
+              <td><code>neurova.ml</code></td>
+              <td>
+                Machine learning (KNN, SVM, Trees, Clustering, PCA, metrics)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.neural</code></td>
+              <td>Neural network layers and training</td>
+            </tr>
+            <tr>
+              <td><code>neurova.architecture</code></td>
+              <td>
+                Pre-built architectures (CNN, LSTM, Transformer, GAN, AutoML)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.nn</code></td>
+              <td>Low-level neural network operations (Tensor, Module)</td>
+            </tr>
+            <tr>
+              <td><code>neurova.datasets</code></td>
+              <td>
+                Built-in datasets (Iris, Titanic, Fashion-MNIST, cascades)
+              </td>
+            </tr>
+            <tr>
+              <td><code>neurova.timeseries</code></td>
+              <td>Time series analysis (ARIMA, decomposition)</td>
+            </tr>
+            <tr>
+              <td><code>neurova.augmentation</code></td>
+              <td>Data augmentation pipelines for training</td>
+            </tr>
+            <tr>
+              <td><code>neurova.calibration</code></td>
+              <td>Camera calibration and 3D geometry</td>
+            </tr>
+            <tr>
+              <td><code>neurova.nvc</code></td>
+              <td>VideoCapture and native utility functions</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- EXAMPLES -->
+        <h2 id="examples">Example Chapters</h2>
+        <p>
+          Neurova includes 12 comprehensive tutorial chapters in the
+          <code>examples/</code> directory:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Chapter</th>
+              <th>Topic</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Getting Started</td>
+              <td>Installation, imports, device config, array ops</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Image Transforms</td>
+              <td>Color spaces, resize, rotate, flip, affine</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Filters</td>
+              <td>Blur, sharpen, edge detection, morphology</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>Features</td>
+              <td>HOG, LBP, Harris corners, gradients, GLCM</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>Detection</td>
+              <td>Haar, LBP, HOG cascades, multi-scale, NMS</td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td>Face</td>
+              <td>FaceDetector, FaceRecognizer, FaceTrainer</td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td>Machine Learning</td>
+              <td>KNN, Trees, SVM, clustering, PCA, metrics</td>
+            </tr>
+            <tr>
+              <td>08</td>
+              <td>Neural Networks</td>
+              <td>Dense, Conv2D, activations, optimizers, CNN</td>
+            </tr>
+            <tr>
+              <td>09</td>
+              <td>Datasets</td>
+              <td>All built-in datasets, data loaders, augmentation</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Video</td>
+              <td>VideoCapture, motion, background subtraction</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Segmentation</td>
+              <td>Thresholding, Otsu, connected components</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>GPU Performance</td>
+              <td>CuPy acceleration, benchmarks, memory</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button># Run any chapter
+python examples/chapter_07_machine_learning.py
+python examples/chapter_09_datasets.py</pre>
+
+        <h3>Complete Projects</h3>
+        <p>Two end-to-end projects with full pipelines:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Description</th>
+              <th>Scripts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Face Recognition</strong></td>
+              <td>Collect faces, train model, webcam recognition</td>
+              <td>5 scripts + pipeline</td>
+            </tr>
+            <tr>
+              <td><strong>Object Detection</strong></td>
+              <td>Annotate images, train Neurova detector</td>
+              <td>5 scripts + pipeline</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre
+          class="code-block"
+        ><button class="copy-btn">Copy</button># Face recognition project
+python examples/face_recognition_project/01_collect_faces.py
+python examples/face_recognition_project/02_prepare_dataset.py
+python examples/face_recognition_project/03_train_model.py
+python examples/face_recognition_project/04_evaluate_model.py
+python examples/face_recognition_project/05_test_webcam.py
+
+# Object detection project
+python examples/object_detection_project/01_annotate_images.py
+python examples/object_detection_project/02_prepare_dataset.py
+python examples/object_detection_project/03_train_detector.py
+python examples/object_detection_project/04_evaluate_detector.py
+python examples/object_detection_project/05_test_webcam.py</pre>
+
+        <div class="help-box">
+          <h3>Need Help?</h3>
+          <p>Check out the resources below or reach out to the community:</p>
+          <a
+            class="btn secondary"
+            href="https://github.com/nalystresearch/neurova/tree/main/examples"
+            ><i class="fa-solid fa-code"></i> Examples</a
+          >
+          <a
+            class="btn secondary"
+            href="https://github.com/nalystresearch/neurova/issues"
+            ><i class="fa-brands fa-github"></i> GitHub Issues</a
+          >
+          <a class="btn secondary" href="../../index.html#contact"
+            ><i class="fa-solid fa-envelope"></i> Contact</a
+          >
+        </div>
+      </main>
+    </div>
+
+    <script src="../../js/neurova.js"></script>
+  </body>
+</html>

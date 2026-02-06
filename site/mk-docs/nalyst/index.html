@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
+        <title>Nalyst Documentation — Machine Learning, Statistics & Deep
+            Learning</title>
+        <meta name="description"
+            content="Nalyst documentation — Full-stack ML library for supervised, unsupervised, time series, survival, and deep learning with AutoML and explainability." />
+        <link rel="stylesheet"
+            href="../../assets/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="../../css/nalyst.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="topbar-row">
+                <div class="brand"><a href="../../index.html">Nalyst
+                        Research</a></div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Nalyst Docs</a></li>
+                    <li><a href="../neurova/index.html">Neurova Docs</a></li>
+                    <li><a href="../../index.html#products">Products</a></li>
+                    <li><a href="../../index.html#docs">Docs</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar">
+                <h4>Getting Started</h4>
+                <ul>
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#quickstart">Quick Start</a></li>
+                </ul>
+                <h4>Core Modules</h4>
+                <ul>
+                    <li><a href="#supervised">Supervised Learning</a></li>
+                    <li><a href="#unsupervised">Unsupervised Learning</a></li>
+                    <li><a href="#timeseries">Time Series</a></li>
+                    <li><a href="#survival">Survival Analysis</a></li>
+                    <li><a href="#deeplearning">Deep Learning</a></li>
+                </ul>
+                <h4>Advanced</h4>
+                <ul>
+                    <li><a href="#automl">AutoML & Tuning</a></li>
+                    <li><a href="#explainability">Explainability</a></li>
+                    <li><a href="#pipelines">Pipelines</a></li>
+                </ul>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a
+                            href="https://github.com/nalystresearch/nalyst">GitHub</a></li>
+                    <li><a href="https://pypi.org/project/nalyst/">PyPI</a></li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <button class="sidebar-toggle">
+                    <i class="fa-solid fa-list"></i> Navigation
+                </button>
+                <h1 id="overview">Nalyst Documentation</h1>
+                <p>Production-grade analytics with a single <code>train()</code>
+                    / <code>infer()</code> API spanning classical ML,
+                    statistical modeling, time series, survival analysis, and a
+                    PyTorch-style deep learning stack.</p>
+
+                <div class="btn-row">
+                    <a class="btn" href="https://pypi.org/project/nalyst/"><i
+                            class="fa-solid fa-download"></i> Install from
+                        PyPI</a>
+                    <a class="btn secondary"
+                        href="https://github.com/nalystresearch/nalyst"><i
+                            class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="card">
+                        <h3><i class="fa-solid fa-brain icon-accent"></i>
+                            Unified API</h3>
+                        <p>One consistent train/infer interface across all model
+                            types — ML, stats, time series, and deep
+                            learning.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i
+                                class="fa-solid fa-wand-magic-sparkles icon-accent"></i>
+                            AutoML</h3>
+                        <p>Automated model selection, hyperparameter tuning, and
+                            imbalance handling built-in.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fa-solid fa-chart-line icon-accent"></i>
+                            Time Series</h3>
+                        <p>ARIMA, VAR, and feature-based forecasting with
+                            leakage-aware backtesting.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i
+                                class="fa-solid fa-network-wired icon-accent"></i>
+                            Deep Learning</h3>
+                        <p>PyTorch-inspired nn module with autograd, 50+ layers,
+                            optimizers, and losses.</p>
+                    </div>
+                </div>
+
+                <h2 id="installation">Installation</h2>
+                <p>Install Nalyst from PyPI with pip:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>pip install nalyst</pre>
+
+                <p>With optional extras (visualization + dataframe support):</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>pip install "nalyst[visualization,dataframes]"</pre>
+
+                <p>From source (development):</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>git clone https://github.com/nalystresearch/nalyst.git
+cd nalyst
+pip install -e .[dev,visualization,dataframes]</pre>
+
+                <h2 id="quickstart">Quick Start</h2>
+                <p>Train and evaluate a classifier in just a few lines:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst import learners, evaluation, datasets
+
+# Sample data
+X, y = datasets.load_sample_classification()
+X_train, X_test, y_train, y_test = evaluation.train_test_split(
+    X, y, test_ratio=0.2, seed=42
+)
+
+# Train a classifier
+model = learners.RandomForestLearner(
+    n_estimators=200,
+    max_depth=8,
+    random_state=42
+)
+model.train(X_train, y_train)
+
+# Evaluate
+preds = model.infer(X_test)
+acc = evaluation.accuracy_score(y_test, preds)
+print(f"Accuracy: {acc:.4f}")</pre>
+
+                <h2 id="supervised">Supervised Learning</h2>
+                <p>Nalyst provides a comprehensive set of model families:</p>
+                <ul>
+                    <li><strong>Linear Models:</strong> Linear/Logistic
+                        Regression, Ridge, Lasso, ElasticNet</li>
+                    <li><strong>Tree Ensembles:</strong> RandomForest,
+                        GradientBoosting, ExtraTrees</li>
+                    <li><strong>Support Vector Machines:</strong> SVC, SVR with
+                        various kernels</li>
+                    <li><strong>Neighbors:</strong> KNN
+                        classifier/regressor</li>
+                    <li><strong>Bayesian:</strong> Naive Bayes variants</li>
+                </ul>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst import learners
+
+# Classification
+model = learners.GradientBoostingLearner(
+    n_estimators=100,
+    learning_rate=0.1
+)
+model.train(X_train, y_train)
+predictions = model.infer(X_test)
+
+# Regression
+reg_model = learners.LinearRegressionLearner()
+reg_model.train(X_train, y_train)
+predictions = reg_model.infer(X_test)</pre>
+
+                <h2 id="unsupervised">Unsupervised Learning</h2>
+                <p>Clustering and dimensionality reduction tools:</p>
+                <ul>
+                    <li><strong>Clustering:</strong> KMeans, DBSCAN,
+                        Hierarchical, GMM</li>
+                    <li><strong>Manifold Learning:</strong> t-SNE, UMAP-style,
+                        Isomap</li>
+                    <li><strong>Diagnostics:</strong> Silhouette scores, cluster
+                        stability, elbow method</li>
+                </ul>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst.clustering import KMeansLearner
+from nalyst.reduction import PCAReducer
+
+# Dimensionality reduction
+pca = PCAReducer(n_components=10)
+X_reduced = pca.fit_transform(X)
+
+# Clustering
+kmeans = KMeansLearner(n_clusters=5)
+kmeans.train(X_reduced)
+labels = kmeans.infer(X_reduced)</pre>
+
+                <h2 id="timeseries">Time Series</h2>
+                <p>Univariate and multivariate forecasting with classical and
+                    ML-based methods:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst.timeseries import arima
+
+# Univariate ARIMA
+y = arima.demos.airpassengers()
+
+model = arima.ARIMA(order=(2, 1, 2))
+model.train(y)
+
+forecast = model.infer(steps=12)
+print(forecast)</pre>
+
+                <table>
+                    <thead>
+                        <tr><th>Method</th><th>Use Case</th><th>Key
+                                Parameters</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ARIMA</td><td>Univariate
+                                forecasting</td><td>order (p, d, q)</td></tr>
+                        <tr><td>SARIMA</td><td>Seasonal
+                                patterns</td><td>seasonal_order</td></tr>
+                        <tr><td>VAR</td><td>Multivariate</td><td>maxlags</td></tr>
+                        <tr><td>Exponential Smoothing</td><td>Trend +
+                                seasonality</td><td>trend, seasonal</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 id="survival">Survival Analysis</h2>
+                <p>Model time-to-event data with proper censoring handling:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst.survival import cox
+
+# Load demo dataset
+X, y_time, y_event = cox.demo_rossi()
+
+# Fit Cox Proportional Hazards model
+model = cox.CoxPH()
+model.train(X, y_time, y_event)
+
+# Get hazard predictions
+hazards = model.infer(X[:5])
+print(hazards)</pre>
+
+                <ul>
+                    <li><strong>Cox Proportional Hazards:</strong> Hazard ratios
+                        and survival curves</li>
+                    <li><strong>Kaplan-Meier:</strong> Non-parametric survival
+                        estimation</li>
+                    <li><strong>Metrics:</strong> Concordance index, Brier
+                        score</li>
+                </ul>
+
+                <h2 id="deeplearning">Deep Learning</h2>
+                <p>PyTorch-inspired neural network module with autograd:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst.nn import Module, layers, optim, losses
+from nalyst.data import DataLoader, TensorDataset
+
+
+class Classifier(Module):
+    def __init__(self, in_features, hidden, num_classes):
+        super().__init__()
+        self.net = layers.Sequential(
+            layers.Linear(in_features, hidden),
+            layers.ReLU(),
+            layers.Linear(hidden, num_classes)
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+
+# Initialize model, optimizer, and loss
+model = Classifier(
+    in_features=20,
+    hidden=64,
+    num_classes=3
+)
+optimizer = optim.Adam(model.parameters(), lr=1e-3)
+criterion = losses.CrossEntropyLoss()
+
+# Create data loader
+train_loader = DataLoader(
+    TensorDataset(X_train, y_train),
+    batch_size=64,
+    shuffle=True
+)
+
+# Training loop
+for epoch in range(10):
+    for xb, yb in train_loader:
+        optimizer.zero_grad()
+        logits = model(xb)
+        loss = criterion(logits, yb)
+        loss.backward()
+        optimizer.step()</pre>
+
+                <h2 id="automl">AutoML & Tuning</h2>
+                <p>Automated model selection and hyperparameter tuning:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst import evaluation, learners
+from nalyst.evaluation import grid_search
+
+# Generate sample data
+X, y = evaluation.make_classification(
+    n_samples=2000,
+    n_features=20,
+    random_state=7
+)
+
+# Define search space
+search_space = {
+    "n_estimators": [100, 200, 400],
+    "max_depth": [None, 8, 12],
+    "max_features": ["sqrt", "log2"],
+}
+
+# Run grid search
+base = learners.RandomForestLearner(random_state=7)
+best_params, best_score = grid_search(
+    base,
+    X,
+    y,
+    param_grid=search_space,
+    scoring=evaluation.accuracy_score,
+    cv=5
+)
+
+print("Best params:", best_params)
+print("CV accuracy:", best_score)</pre>
+
+                <h2 id="explainability">Explainability & Diagnostics</h2>
+                <p>Understand your models with built-in tools:</p>
+                <ul>
+                    <li><strong>Feature Importance:</strong> Permutation
+                        importance, built-in importance</li>
+                    <li><strong>SHAP/LIME-style:</strong> Attribution helpers
+                        when dependencies installed</li>
+                    <li><strong>Diagnostics:</strong> Calibration plots,
+                        residual analysis, confusion matrices</li>
+                    <li><strong>Partial Dependence:</strong> PDP and ICE
+                        curves</li>
+                </ul>
+
+                <h2 id="pipelines">Pipelines & Serialization</h2>
+                <p>Bundle preprocessing with models for consistent
+                    train/inference:</p>
+                <pre
+                    class="code-block"><button class="copy-btn">Copy</button>from nalyst.transform import Pipeline, StandardScaler, OneHotEncoder
+from nalyst import learners
+
+# Create pipeline
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('encoder', OneHotEncoder(columns=['category'])),
+    ('model', learners.RandomForestLearner())
+])
+
+# Train and save
+pipeline.train(X_train, y_train)
+pipeline.save('model_pipeline.pkl')
+
+# Load and infer
+loaded = Pipeline.load('model_pipeline.pkl')
+predictions = loaded.infer(X_new)</pre>
+
+                <h2>Modules at a Glance</h2>
+                <table>
+                    <thead>
+                        <tr><th>Module</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>learners</code></td><td>Linear models,
+                                trees, ensembles, SVM, neighbors</td></tr>
+                        <tr><td><code>clustering</code></td><td>KMeans, DBSCAN,
+                                hierarchical, GMM</td></tr>
+                        <tr><td><code>reduction</code></td><td>PCA, manifold
+                                learning, feature selection</td></tr>
+                        <tr><td><code>transform</code></td><td>Scalers,
+                                encoders, imputers, pipelines</td></tr>
+                        <tr><td><code>evaluation</code></td><td>Metrics,
+                                cross-validation, grid search</td></tr>
+                        <tr><td><code>timeseries</code></td><td>ARIMA, SARIMA,
+                                VAR, exponential smoothing</td></tr>
+                        <tr><td><code>survival</code></td><td>Cox PH,
+                                Kaplan-Meier, AFT models</td></tr>
+                        <tr><td><code>nn</code></td><td>Layers, optimizers,
+                                losses, autograd</td></tr>
+                        <tr><td><code>automl</code></td><td>Model search,
+                                tuning, imbalance handling</td></tr>
+                        <tr><td><code>explainability</code></td><td>Feature
+                                importance, SHAP, diagnostics</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="help-box">
+                    <h3>Need Help?</h3>
+                    <p>Check out the resources below or reach out to the
+                        community:</p>
+                    <a class="btn secondary"
+                        href="https://github.com/nalystresearch/nalyst/tree/main/examples"><i
+                            class="fa-solid fa-code"></i> Examples</a>
+                    <a class="btn secondary"
+                        href="https://github.com/nalystresearch/nalyst/issues"><i
+                            class="fa-brands fa-github"></i> GitHub Issues</a>
+                    <a class="btn secondary" href="../../index.html#contact"><i
+                            class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+            </main>
+        </div>
+
+        <script src="../../js/nalyst.js"></script>
+    </body>
+</html>
