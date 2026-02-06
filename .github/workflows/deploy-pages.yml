@@ -34,6 +34,8 @@ jobs:
 
       - name: Build
         working-directory: frontend
+        env:
+          VITE_BASE: /nalyst-neurova-repo/app/
         run: npm run build
 
       - name: Assemble site

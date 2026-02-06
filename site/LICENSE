@@ -1,81 +1,83 @@
-NALYST RESEARCH PROPRIETARY LICENSE
-Copyright © 2026 Nalyst Research. All Rights Reserved.
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
 
-TERMS AND CONDITIONS
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
-1. DEFINITIONS
-   "Software" refers to the Nalyst and Neurova libraries, including all source
-   code, documentation, and associated materials provided by Nalyst Research.
-   "Licensor" refers to Nalyst Research.
-   "You" refers to the individual or entity accessing or using the Software.
+1. Definitions.
 
-2. GRANT OF LICENSE
-   Subject to the terms of this License, the Licensor grants You a limited,
-   non-exclusive, non-transferable, revocable licence to:
-   (a) View and use the Software for personal, non-commercial evaluation purposes only.
-   (b) Install the Software via official package managers (pip, PyPI) for
-   personal learning and research purposes.
+	"License" shall mean the terms and conditions for use, reproduction,
+	and distribution as defined by Sections 1 through 9 of this document.
 
-3. RESTRICTIONS
-   You are expressly prohibited from:
-   (a) Copying, reproducing, or duplicating the Software or any part thereof,
-   except as strictly necessary for personal evaluation.
-   (b) Modifying, adapting, translating, or creating derivative works based
-   on the Software.
-   (c) Distributing, sublicensing, leasing, renting, lending, or otherwise
-   transferring the Software to any third party.
-   (d) Selling, commercialising, or using the Software for any commercial purpose.
-   (e) Reverse engineering, decompiling, disassembling, or attempting to derive
-   the source code of the Software (except to the extent permitted by
-   applicable law).
-   (f) Removing, altering, or obscuring any copyright, trademark, or other
-   proprietary notices contained in the Software.
-   (g) Using the Software to develop competing products or services.
+	"Licensor" shall mean the copyright owner or entity authorized by
+	the copyright owner that is granting the License.
 
-4. INTELLECTUAL PROPERTY
-   The Software and all copies thereof are proprietary to the Licensor and
-   title thereto remains exclusively with the Licensor. All rights in the
-   Software not specifically granted in this License are reserved to the
-   Licensor. The Software is protected by the copyright laws of the United
-   Kingdom and international copyright treaties.
+	"Work" shall mean the work of authorship made available under the License.
 
-5. NO WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE LICENSOR DOES
-   NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE
-   OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE.
+	"Derivative Works" shall mean any work that is based on the Work.
 
-6. LIMITATION OF LIABILITY
-   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
-   LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-   OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE,
-   ARISING OUT OF OR IN CONNECTION WITH THIS LICENSE OR THE USE OF THE
-   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+	"Contribution" shall mean any work of authorship submitted for inclusion.
 
-7. TERMINATION
-   This License is effective until terminated. Your rights under this License
-   will terminate automatically without notice if You fail to comply with any
-   of its terms. Upon termination, You must cease all use of the Software and
-   destroy all copies in Your possession.
+	"Contributor" shall mean Licensor and any individual or Legal Entity
+	on behalf of whom a Contribution has been received by Licensor.
 
-8. GOVERNING LAW AND JURISDICTION
-   This License shall be governed by and construed in accordance with the laws
-   of England and Wales. Any disputes arising out of or in connection with this
-   License shall be subject to the exclusive jurisdiction of the courts of
-   England and Wales.
+2. Grant of Copyright License. Each Contributor grants to You a perpetual,
+	worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright
+	license to reproduce, prepare Derivative Works of, publicly display,
+	publicly perform, sublicense, and distribute the Work.
 
-9. ENTIRE AGREEMENT
-   This License constitutes the entire agreement between You and the Licensor
-   regarding the Software and supersedes all prior agreements, understandings,
-   and communications, whether written or oral.
+3. Grant of Patent License. Each Contributor grants to You a perpetual,
+	worldwide, non-exclusive, no-charge, royalty-free, irrevocable patent
+	license to make, have made, use, offer to sell, sell, import, and
+	otherwise transfer the Work.
 
-10. CONTACT
-    For licensing enquiries, commercial use permissions, or other questions,
-    please contact: nalystresearch@gmail.com
+4. Redistribution. You may reproduce and distribute copies of the Work
+	provided that You meet the following conditions:
+	(a) You must give any other recipients a copy of this License; and
+	(b) You must cause any modified files to carry prominent notices; and
+	(c) You must retain all copyright, patent, and trademark notices.
 
-By using, accessing, or installing the Software, You acknowledge that You have
-read, understood, and agree to be bound by the terms of this License.
+5. Submission of Contributions. Any Contribution submitted for inclusion
+	shall be under the terms of this License.
 
-Nalyst Research
-United Kingdom
+6. Trademarks. This License does not grant permission to use trade names,
+	trademarks, service marks, or product names of the Licensor.
+
+7. Disclaimer of Warranty. The Work is provided on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+
+8. Limitation of Liability. In no event shall any Contributor be liable
+	for damages arising from the use of the Work.
+
+9. Accepting Warranty or Additional Liability. You may choose to offer
+	support, warranty, indemnity, or other liability obligations.
+
+END OF TERMS AND CONDITIONS
+
+Copyright 2025 Squid Consultancy Group (SCG)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+	 http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+─────────────────────────────────────────────────────────────
+COMMERCIAL LICENSE NOTICE:
+
+This software is provided free for educational, academic, and
+non-commercial use only.
+
+For any commercial use, including distribution, sale, or inclusion
+in commercial products, please contact Squid Consultancy Group (SCG)
+for licensing terms at:
+
+	 https://github.com/nalystresearch/neurova
+
+─────────────────────────────────────────────────────────────

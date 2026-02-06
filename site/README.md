@@ -34,23 +34,6 @@ pip install neurova
 | [Datasets](mk-docs/neurova/index.html#datasets-tabular)         | Built-in datasets and samples             |
 | [Examples](mk-docs/neurova/index.html#examples)                 | Tutorial chapters and projects            |
 
-## Repository Structure
-
-```
-nalyst-neurova-repo/
-├── mk-docs/
-│   └── neurova/
-│       └── index.html      # Main documentation page
-├── css/                    # Stylesheets
-├── js/                     # JavaScript files
-├── images/                 # Documentation images
-├── assets/                 # Static assets
-├── index.html             # Landing page
-├── service.html           # Services page
-├── solution.html          # Solutions page
-└── LICENSE                # MIT License
-```
-
 ## Related Repositories
 
 - **[neurova](https://github.com/nalystresearch/neurova)** - Main package source code
