@@ -1,0 +1,46 @@
+# Development
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Uploads
+backend/uploads/
+
+# Node
+node_modules/
+.npm
+*.log
+
+# Build
+frontend/dist/
+frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db

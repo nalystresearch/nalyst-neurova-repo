@@ -1,0 +1,146 @@
+.multi-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 16px 28px;
+}
+
+.multi-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.multi-header .left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.back:hover {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.multi-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.multi-page .subtitle {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+}
+
+.loading {
+  padding: 24px 0;
+  color: var(--text-secondary);
+}
+
+.empty {
+  padding: 42px 0;
+  text-align: center;
+}
+
+.primary-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.16),
+    rgba(124, 58, 237, 0.14) 45%,
+    rgba(59, 130, 246, 0.14)
+  );
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  color: var(--text-primary);
+}
+
+.multi-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.multi-grid.cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.multi-grid.cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.multi-grid.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.multi-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.multi-thumb {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  background: rgba(29, 18, 51, 0.06);
+}
+
+@media (max-width: 900px) {
+  .multi-thumb {
+    height: 240px;
+  }
+}
+
+.multi-meta {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.filename {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(29, 18, 51, 0.86);
+}
+
+.annotate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.annotate-link:hover {
+  background: rgba(255, 255, 255, 0.96);
+}

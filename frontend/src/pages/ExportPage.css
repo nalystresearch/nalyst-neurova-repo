@@ -1,0 +1,77 @@
+.export-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 16px 28px;
+}
+
+.export-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.export-page .subtitle {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+}
+
+.panel {
+  margin-top: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.panel-desc {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.classes {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.classes-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.classes-empty {
+  color: var(--text-secondary);
+}
+
+.classes-list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(29, 18, 51, 0.86);
+}
